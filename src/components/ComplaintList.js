@@ -10,7 +10,7 @@ const ComplaintList = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/complaints');
+        const res = await axios.get('https://zaloba-backend.onrender.com/api/complaints');
         setComplaints(res.data);
       } catch (err) {
         setError('Не удалось загрузить жалобы');
@@ -42,7 +42,7 @@ const ComplaintList = () => {
           </div>
           {complaint.photo_url && (
             <img
-              src={`http://localhost:5000/uploads/${complaint.photo_url}`}
+              src={`https://zaloba-backend.onrender.com/api/uploads/${complaint.photo_url}`}
               alt="Фото жалобы"
               className="complaint-photo"
             />

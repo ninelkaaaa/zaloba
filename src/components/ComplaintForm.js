@@ -17,7 +17,7 @@ const ComplaintForm = () => {
 
   const fetchCategories = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/categories');
+      const res = await axios.get('https://zaloba-backend.onrender.com/api/categories');
       setCategories(res.data);
     } catch (err) {
       console.error('Ошибка при загрузке категорий:', err);
@@ -39,7 +39,7 @@ const ComplaintForm = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/complaints', formData);
+      await axios.post('https://zaloba-backend.onrender.com/api/complaints', formData);
       setStatusMessage('Жалоба отправлена успешно');
       setMessage('');
       setSelectedCategory('');
