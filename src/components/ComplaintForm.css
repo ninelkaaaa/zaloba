@@ -11,12 +11,14 @@
 .complaint-form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .complaint-form label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .complaint-form select,
@@ -24,11 +26,17 @@
 .complaint-form input[type="file"],
 .complaint-form button {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 6px;
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
+  box-sizing: border-box;
+}
+
+.complaint-form textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .complaint-form button {
@@ -37,7 +45,7 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .complaint-form button:hover {
@@ -48,24 +56,36 @@
   color: green;
   text-align: center;
   margin-top: 15px;
+  font-size: 14px;
 }
 
 .error {
   color: red;
   text-align: center;
   margin-top: 15px;
+  font-size: 14px;
 }
+
+/* Адаптивность */
 @media (max-width: 600px) {
-  .complaint-row {
-    font-size: 14px;
+  .complaint-form {
+    padding: 16px;
+    margin: 20px 16px;
   }
 
-  .complaint-card {
-    padding: 12px;
-  }
-
-  h2 {
+  .complaint-form h2 {
     font-size: 20px;
-    text-align: center;
+  }
+
+  .complaint-form label {
+    font-size: 13px;
+  }
+
+  .complaint-form select,
+  .complaint-form textarea,
+  .complaint-form input[type="file"],
+  .complaint-form button {
+    font-size: 13px;
+    padding: 8px;
   }
 }
