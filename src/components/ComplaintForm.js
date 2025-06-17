@@ -52,7 +52,7 @@ const ComplaintForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="complaint-form">
-      <h2>Подать жалобу</h2>
+      <h2>Оставить жалобы и предложения</h2>
 
       <label>Категория:</label>
       <select
